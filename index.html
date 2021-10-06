@@ -5,8 +5,8 @@
 	<title>CDN trying thingy</title>
 </head>
 <body>
-  <video id="punchbox" width="320" height="240" controls>
-       <source id = "davideo" src="" type="video/mp4">
+  <video id="punchbox" width="320" height="240" controls autoplay>
+       <source src="" type="video/mp4">
        Your browser doesn't support embedded videos
   </video>
 	<center><p id = "thistext">connecting to server...</p></center>
@@ -40,7 +40,7 @@
 	    }
             
             else if (checkValue(data.country, oceania_arr) == "Exist") {
-		davideo.src = "http://140.238.195.144:8080/media/IMG_5199.MP4";
+		thevideo.src = "http://140.238.195.144:8080/media/IMG_5199.MP4";
 		document.getElementById("thistext").innerHTML = "Server: Oracle Cloud AMD, Sydney";
 	    }
             else {
