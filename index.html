@@ -1,11 +1,6 @@
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-	jQuery.get("https://ipinfo.io",function(e){
+	$.getJSON('https://ipinfo.io', function(data) {
+    console.log(data.region);
 });
-	},"jsonp")
-	$.getJSON('https://ipinfo.io', function(region) {
-		  console.log(region)
-		}
-
 </script>
