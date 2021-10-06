@@ -19,16 +19,16 @@ $.getJSON('https://ipinfo.io', function(data) {
 
       return status;
    }
-            if (checkValue(data.country, asia_arr) == "Exist") {
-		thevideo.src = "http://47.241.119.225:8080/media/boxingreencode.mp4";
-	        document.getElementById("thistext").innerHTML = "Server: Aliyun, Singapore";
-	    }
+   if (checkValue(data.country, asia_arr) == "Exist") {
+       thevideo.src = "http://47.241.119.225:8080/media/boxingreencode.mp4";
+       document.getElementById("thistext").innerHTML = "Server: Aliyun, Singapore";
+   }
             
-            else if (checkValue(data.country, oceania_arr) == "Exist") {
-		thevideo.src = "http://140.238.195.144:8080/media/boxingreencode.mp4";
-		document.getElementById("thistext").innerHTML = "Server: Oracle Cloud AMD, Sydney";
-	    }
-            else {
-	      document.getElementById("thistext").innerHTML = "we have no servers in your continent yet.";
-	    }
-  });
+   else if (checkValue(data.country, oceania_arr) == "Exist") {
+       thevideo.src = "http://140.238.195.144:8080/media/boxingreencode.mp4";
+       document.getElementById("thistext").innerHTML = "Server: Oracle Cloud AMD, Sydney";
+   }
+   else {
+     document.getElementById("thistext").innerHTML = "we have no servers in your continent yet.";
+   }
+ });
