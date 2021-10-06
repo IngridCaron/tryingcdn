@@ -7,8 +7,10 @@
 <body>
   <video id="punchbox" width="320" height="240" controls autoplay src = "">
   </video>
+	<center><p id = "thistext">connecting to server...</p></center>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
+	  
 	  var thevideo = document.getElementById("punchbox");
 	  $.getJSON('https://ipinfo.io', function(data) {
             var asia_arr = ['AE', 'AF', 'AM', 'AZ', 'BD', 'BH', 'BN', 'BT', 'CC', 'CN', 'CX'
@@ -32,10 +34,10 @@
 	    }
             if (checkValue(data.country, asia_arr) == "Exist") {
 		thevideo.src = "http://47.241.119.225:8080/media/IMG_5199.MP4";
-	        console.log("Server: Aliyun");
+	        document.getElementById("thistext").innerHTML = "Server: Aliyun";
 	    }
             else {
-	      console.log("sorry we havent got a server in your continent region yet");
+	      document.getElementById("thistext").innerHTML = "we have no servers in your continent yet.";
 	    }
   });
   </script>
