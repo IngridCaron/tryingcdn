@@ -1,6 +1,40 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-	$.getJSON('https://ipinfo.io', function(data) {
-    console.log(data.region);
-});
-</script>
+<!doctype html>
+
+<html lang="en">
+<head>
+	<title>CDN trying thingy</title>
+</head>
+<body>
+  <video id="punchbox" controls autoplay src = "">
+  </video>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+	  var thevideo = document.getElementById("punchbox");
+	  $.getJSON('https://ipinfo.io', function(data) {
+            var asia_arr = ['AE', 'AF', 'AM', 'AZ', 'BD', 'BH', 'BN', 'BT', 'CC', 'CN', 'CX'
+  , 'CY', 'GE', 'HK', 'ID', 'IL', 'IN', 'IO', 'IQ', 'IR', 'JO', 'JP', 'KG', 'KH', 'KP', 'KR', 'KW',
+  , 'KZ', 'LA', 'LB', 'LK', 'MM', 'MN', 'MO', 'MV', 'MY', 'NP', 'OM', 'PH', 'PK', 'PS', 'QA', 'SA'
+  , 'SG', 'SY', 'TH', 'TJ', 'TM', 'TR', 'TW', 'UZ', 'VN', 'YE'];
+  	    var europe_arr = []
+	    var america_arr = []
+	    var oceania_arr = []
+	    function checkValue(value, arr) {
+               var status = 'Not exist';
+               for (var i = 0; i < arr.length; i++) {
+                   var name = arr[i];
+                   if (name == value) {
+                       status = 'Exist';
+                       break;
+                   }
+               }
+
+               return status;
+	    }
+            if (checkValue(data.country, asia_arr) == "Exist") {
+		thevideo.src = "http://47.241.119.225:8080/media/IMG_5199.MP4";
+	        console.log("Server: Aliyun");
+	    }
+  });
+  </script>
+</body>
+</html>
