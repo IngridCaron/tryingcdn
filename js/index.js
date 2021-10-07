@@ -4,7 +4,10 @@ $.getJSON('https://ipinfo.io', function(data) {
   , 'CY', 'GE', 'HK', 'IL', 'IN', 'IO', 'IQ', 'IR', 'JO', 'JP', 'KG', 'KH', 'KP', 'KR', 'KW',
   , 'KZ', 'LA', 'LB', 'LK', 'MM', 'MN', 'MO', 'MV', 'MY', 'NP', 'OM', 'PH', 'PK', 'PS', 'QA', 'SA'
   , 'SG', 'SY', 'TH', 'TJ', 'TM', 'TR', 'TW', 'UZ', 'VN', 'YE'];
-  var europe_arr = [];
+  
+  var europe_arr = ['AD', 'AL', 'AT', 'BA', 'BE', 'BG', 'BY', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FO', 'FR', 'GB', 'GG,
+  , 'GI', 'GR', 'HR', 'HU', 'IE', 'IM', 'IS', 'IT', 'JE', 'LI', 'LT', 'LU', 'LV', 'MC', 'MD', 'ME', 'MK'
+  , 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'RU', 'SE', 'SI', 'SJ', 'SK', 'SM', 'UA'];
   var america_arr = [];
   var oceania_arr = ['AU', 'NZ', 'ID'];
   function checkValue(value, arr) {
@@ -20,8 +23,8 @@ $.getJSON('https://ipinfo.io', function(data) {
       return status;
    }
    if (checkValue(data.country, asia_arr) == "Exist") {
-       thevideo.src = "http://47.241.119.225:8080/media/boxingreencode.mp4";
-       document.getElementById("thistext").innerHTML = "Server: Aliyun, Singapore";
+       thevideo.src = "http://13.230.2.76:8080/media/boxingreencode.mp4";
+       document.getElementById("thistext").innerHTML = "Server: AWS Lightsail, Tokyo";
    }
             
    else if (checkValue(data.country, oceania_arr) == "Exist") {
