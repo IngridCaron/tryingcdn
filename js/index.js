@@ -31,4 +31,4 @@ $.getJSON('https://ipinfo.io', function(data) {
    else {
      document.getElementById("thistext").innerHTML = "we have no servers in your continent yet.";
    }
- });
+});
