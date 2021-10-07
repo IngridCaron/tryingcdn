@@ -31,6 +31,14 @@ $.getJSON('https://ipinfo.io', function(data) {
        thevideo.src = "http://140.238.195.144:8080/media/boxingreencode.mp4";
        document.getElementById("thistext").innerHTML = "Server: Oracle Cloud AMD, Sydney";
    }
+   else if (checkValue(data.country, america_arr) == "Exist") {
+       thevideo.src = "http://147.182.244.25:8080/media/boxingreencode.mp4";
+       document.getElementById("thistext").innerHTML = "Server: DigitalOcean, San Francisco";
+   }
+   else if (checkValue(data.country, europe_arr) == "Exist") {
+       thevideo.src = "http://161.35.65.169:8080/media/boxingreencode.mp4";
+       document.getElementById("thistext").innerHTML = "Server: DigitalOcean, Frankfurt";
+   }
    else {
      document.getElementById("thistext").innerHTML = "we have no servers in your continent yet.";
    }
