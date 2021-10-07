@@ -8,7 +8,7 @@ $.getJSON('https://ipinfo.io', function(data) {
   var europe_arr = ['AD', 'AL', 'AT', 'BA', 'BE', 'BG', 'BY', 'CH', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FO', 'FR', 'GB', 'GG'
   , 'GI', 'GR', 'HR', 'HU', 'IE', 'IM', 'IS', 'IT', 'JE', 'LI', 'LT', 'LU', 'LV', 'MC', 'MD', 'ME', 'MK'
   , 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'RU', 'SE', 'SI', 'SJ', 'SK', 'SM', 'UA'];
-  var america_arr = [];
+  var america_arr = ['CA', 'US', 'MX'];
   var oceania_arr = ['AU', 'NZ', 'ID'];
   function checkValue(value, arr) {
     var status = 'Not exist';
