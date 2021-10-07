@@ -1,12 +1,12 @@
 var thevideo = document.getElementById("punchbox");
 $.getJSON('https://ipinfo.io', function(data) {
   var asia_arr = ['AE', 'AF', 'AM', 'AZ', 'BD', 'BH', 'BN', 'BT', 'CC', 'CN', 'CX'
-  , 'CY', 'GE', 'HK', 'ID', 'IL', 'IN', 'IO', 'IQ', 'IR', 'JO', 'JP', 'KG', 'KH', 'KP', 'KR', 'KW',
+  , 'CY', 'GE', 'HK', 'IL', 'IN', 'IO', 'IQ', 'IR', 'JO', 'JP', 'KG', 'KH', 'KP', 'KR', 'KW',
   , 'KZ', 'LA', 'LB', 'LK', 'MM', 'MN', 'MO', 'MV', 'MY', 'NP', 'OM', 'PH', 'PK', 'PS', 'QA', 'SA'
   , 'SG', 'SY', 'TH', 'TJ', 'TM', 'TR', 'TW', 'UZ', 'VN', 'YE'];
-  var europe_arr = []
-  var america_arr = []
-  var oceania_arr = ['AU', 'NZ']
+  var europe_arr = [];
+  var america_arr = [];
+  var oceania_arr = ['AU', 'NZ', 'ID'];
   function checkValue(value, arr) {
     var status = 'Not exist';
     for (var i = 0; i < arr.length; i++) {
